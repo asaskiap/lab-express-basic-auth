@@ -4,6 +4,19 @@
     <title>Lab Express Basic Authentication</title>
     <link rel='stylesheet' href='/styles/style.css' />
   </head>
+  <nav>
+    {{#if user}}
+    <button><a href="/main">Main Hangout</a></button>
+    <button><a href="/private">Private Space</a></button>
+    <button><a href="/profile">{{user.username}}'s Profile</a></button>
+    <form method="POST" action="/log-out">
+          <button style="color: #00b7ff;;">Log Out</button>
+        </form>
+        {{/if}}
+
+    <button><a href="/">Take me Home</a></button>
+
+  </nav>
   <body>
     {{{body}}}
   </body>
